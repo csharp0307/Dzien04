@@ -47,6 +47,7 @@ namespace FirstWinApp
                 return;
             }
             form = new FormExternal();
+            //form.FormClosed +=
             form.Show();
             //form.ShowDialog();
         }
@@ -58,6 +59,14 @@ namespace FirstWinApp
                 form.Close();
                 //form.Dispose();
                 form = null;
+            }
+        }
+
+        private void CommonButton_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null) {
+                MessageBox.Show(btn.Tag.ToString());
             }
         }
     }
