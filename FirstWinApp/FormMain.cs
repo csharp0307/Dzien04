@@ -47,7 +47,6 @@ namespace FirstWinApp
                 return;
             }
             form = new FormExternal();
-            //form.FormClosed +=
             form.Show();
             //form.ShowDialog();
         }
