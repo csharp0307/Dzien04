@@ -54,6 +54,17 @@ namespace MathQuiz
             }
         }
 
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            String msg = "Czy na pewno zamknąć aplikację?";
+            String title = "Pytanie";
+            DialogResult result = MessageBox.Show(msg, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result==DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
         private void CheckAnswers()
         {
             int correctAnswers = 0;

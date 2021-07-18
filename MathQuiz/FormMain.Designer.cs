@@ -174,6 +174,7 @@ namespace MathQuiz
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MathQuiz";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numQ1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQ2)).EndInit();
