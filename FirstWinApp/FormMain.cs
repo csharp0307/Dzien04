@@ -47,8 +47,14 @@ namespace FirstWinApp
                 return;
             }
             form = new FormExternal();
+            form.FormClosed += Form_FormClosed;
             form.Show();
             //form.ShowDialog();
+        }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form = null;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -67,6 +73,16 @@ namespace FirstWinApp
             if (btn != null) {
                 MessageBox.Show(btn.Tag.ToString());
             }
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            button11.Click += Button11_Click;
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello world!");
         }
     }
 }
