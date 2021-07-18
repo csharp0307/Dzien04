@@ -40,7 +40,8 @@ namespace MathQuiz
             this.numQ4 = new System.Windows.Forms.NumericUpDown();
             this.lblQ4 = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerQuiz = new System.Windows.Forms.Timer(this.components);
+            this.panelQuiz = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numQ1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQ2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQ3)).BeginInit();
@@ -138,6 +139,19 @@ namespace MathQuiz
             this.btnStart.TabIndex = 9;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // timerQuiz
+            // 
+            this.timerQuiz.Interval = 1000;
+            this.timerQuiz.Tick += new System.EventHandler(this.timerQuiz_Tick);
+            // 
+            // panelQuiz
+            // 
+            this.panelQuiz.Location = new System.Drawing.Point(91, 58);
+            this.panelQuiz.Name = "panelQuiz";
+            this.panelQuiz.Size = new System.Drawing.Size(365, 257);
+            this.panelQuiz.TabIndex = 10;
             // 
             // FormMain
             // 
@@ -154,6 +168,7 @@ namespace MathQuiz
             this.Controls.Add(this.numQ1);
             this.Controls.Add(this.lblQ1);
             this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.panelQuiz);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormMain";
@@ -180,7 +195,8 @@ namespace MathQuiz
         private System.Windows.Forms.NumericUpDown numQ4;
         private System.Windows.Forms.Label lblQ4;
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerQuiz;
+        private System.Windows.Forms.Panel panelQuiz;
     }
 }
 
